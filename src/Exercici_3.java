@@ -124,13 +124,29 @@ class Rectangle extends Shape {
 }
 
 class Square extends Rectangle{
+    double side = 1.0;
 
     Square(){ }
     Square(double side) {
     }
     Square(double side,String color,boolean filled) {
+        this.side = side;
         super.getColor();
         super.isFilled();
+
+    }
+    public double getSide() {
+        return side;
     }
 
+    public void setSide(double side) {
+        this.side = side;
+    }
+
+    @Override
+    public String toString() {
+        return "Square{" +
+                "side=" + side +
+                '}';
+    }
 }
