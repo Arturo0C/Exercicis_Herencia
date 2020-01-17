@@ -2,7 +2,8 @@ import javafx.scene.shape.Circle;
 
 public class Exercici_3 {
     public static void main(String[] args) {
-    Shape s;
+    Shape s = new Square(2,"blue",true);
+
     }
 }
 
@@ -42,18 +43,94 @@ class Shape {
                 '}';
     }
 }
-
+/**/
 class CircleEx3 extends Shape {
    private double radius = 1.0;
-
-    CircleEx3(){
+    // Overload al constructor depenent del parametres.
+   public CircleEx3(){
     }
-    CircleEx3(double radius){
+   public CircleEx3(double radius){
         this.radius = radius;
     }
-    CircleEx3(double radius,String color,boolean filled) {
+    public CircleEx3(double radius,String color,boolean filled) {
+        super(color,filled);
+        this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public double getArea() {
+     return 2.0;
+    }
+
+    public double getPerimeter(){
+       return 2.9;
+    }
+
+    @Override
+    public String toString() {
+        return "CircleEx3{" +
+                "radius=" + radius +
+                '}';
+    }
+}
+
+class Rectangle extends Shape {
+    private double width = 1.0;
+    private double lenght = 1.0;
+
+    Rectangle() {}
+    Rectangle(double width,double lenght){}
+    Rectangle(double width,double lenght,String color, boolean filled) {
         super(color,filled);
     }
 
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getLenght() {
+        return lenght;
+    }
+
+    public void setLenght(double lenght) {
+        this.lenght = lenght;
+    }
+
+    public double setArea() {
+        return 1.0;
+    }
+    public double setPerimeter(){
+        return 1.0;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "width=" + width +
+                ", lenght=" + lenght +
+                '}';
+    }
+}
+
+class Square extends Rectangle{
+
+    Square(){ }
+    Square(double side) {
+    }
+    Square(double side,String color,boolean filled) {
+        super.getColor();
+        super.isFilled();
+    }
 
 }
