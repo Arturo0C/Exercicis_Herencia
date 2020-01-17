@@ -1,9 +1,12 @@
 import javafx.scene.shape.Circle;
 
+import static java.lang.Math.PI;
+
+
 public class Exercici_3 {
     public static void main(String[] args) {
     Shape s = new Square(2,"blue",true);
-
+        System.out.println(s.toString());
     }
 }
 
@@ -66,11 +69,13 @@ class CircleEx3 extends Shape {
     }
 
     public double getArea() {
-     return 2.0;
+        double area;
+        return area = PI*Math.pow(radius,2);
     }
 
     public double getPerimeter(){
-       return 2.9;
+       double perimeter;
+       return perimeter = (2*PI)*radius;
     }
 
     @Override
